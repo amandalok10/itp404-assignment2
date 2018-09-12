@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Client-side Assignment 2</title>
+    
+    </head>
+
+<body>
+    
+
+    
+  <form id="test">
+  Search subreddit:<br>
+  <input type="text" id="subreddit" name="subreddit" value=""><br>
+  <br><br>
+  <input id="submit" type="submit" value="Submit">
+</form>
+
+
+<template id="post-template">
+    {{#each posts}}
+    <div class="post">
+        <a target="_blank" href="{{data.url}}"> <h1>Title: {{data.title}}</h1> </a>
+        <p>Score: {{data.score}}</p>
+        
+        <p>Subreddit Subscribers: {{data.subreddit_subscribers}}</p>
+        {{#if data.num_comments}}
+        Number of Comments: {{data.num_comments}}
+        {{else}}
+        No comments
+        {{/if}}
+
+    </div>
+    {{/each}}
+
+</template>  
+    
+       <div id='results'> </div>
+    
+  
+    
+    
+       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+   <script src="itp404-assignment2.js"></script> 
+    
+    
+    
+    
+    
+    
+    
+    </body>
+
+
+</html>
